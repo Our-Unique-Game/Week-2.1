@@ -1,14 +1,16 @@
 using UnityEngine;
 
-// A simple script that makes the object's grow bigger and smaller, like a heartbeat
+// A simple script that makes the object grow bigger and smaller, like a heartbeat
 public class Heartbeat : MonoBehaviour
 {
-    [Tooltip("The maximum scale of the object")]
-    public float m_MaxScale = 1.0f; // The maximum scale of the object
-    [Tooltip("The minimum scale of the object")]
-    public float m_MinScale = 0.5f; // The minimum scale of the object
-    [Tooltip("Time to complete one heartbeat (in seconds)")]
-    public float m_Period = 1.5f; // Time it takes for one full heartbeat
+    [SerializeField, Tooltip("The maximum scale of the object")]
+    private float m_MaxScale = 1.0f; // The maximum scale of the object
+
+    [SerializeField, Tooltip("The minimum scale of the object")]
+    private float m_MinScale = 0.5f; // The minimum scale of the object
+
+    [SerializeField, Tooltip("Time to complete one heartbeat (in seconds)")]
+    private float m_Period = 1.5f; // Time it takes for one full heartbeat
 
     void Start()
     {   

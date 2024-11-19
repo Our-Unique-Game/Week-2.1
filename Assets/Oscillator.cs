@@ -3,11 +3,11 @@ using UnityEngine;
 // Makes a transform oscillate left and right relative to its start position
 public class Oscillator : MonoBehaviour
 {
-    [Tooltip("Distance to oscillate (in meters)")]
-    public float m_Amplitude = 10.0f; // Increase this value to extend the oscillation range
+    [SerializeField, Tooltip("Distance to oscillate (in meters)")]
+    private float m_Amplitude = 10.0f; // Increase this value to extend the oscillation range
 
-    [Tooltip("Time to complete one oscillation (in seconds)")]
-    public float m_Period = 2.0f; // Time it takes for one full left-right oscillation
+    [SerializeField, Tooltip("Time to complete one oscillation (in seconds)")]
+    private float m_Period = 2.0f; // Time it takes for one full left-right oscillation
 
     private Vector3 m_StartPosition;
 
