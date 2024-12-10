@@ -11,12 +11,14 @@ public class Oscillator : MonoBehaviour
 
     private Vector3 m_StartPosition;
 
-    void Start(){
+    void Start()
+    {
         // Record the starting position of the object
         m_StartPosition = transform.position;
     }
 
-    void Update(){
+    void Update()
+    {
         // Time-based oscillation
         float time = Time.time / m_Period; // Normalize time based on the period
         float offset = Mathf.Cos(2.0f * Mathf.PI * time); // Smooth oscillation between -1 and 1
@@ -26,5 +28,5 @@ public class Oscillator : MonoBehaviour
 
         // Update the transform position
         transform.position = pos;
-    }  
+    }
 }

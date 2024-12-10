@@ -12,11 +12,13 @@ public class Heartbeat : MonoBehaviour
     [SerializeField, Tooltip("Time to complete one heartbeat (in seconds)")]
     private float m_Period = 1.5f; // Time it takes for one full heartbeat
 
-    void Start(){
+    void Start()
+    {
     }
 
     // Update is called once per frame
-    void Update(){
+    void Update()
+    {
         // Time-based heartbeat
         float time = Time.time / m_Period; // Normalize time based on the period
         float offset = Mathf.Cos(2.0f * Mathf.PI * time); // Smooth oscillation between -1 and 1

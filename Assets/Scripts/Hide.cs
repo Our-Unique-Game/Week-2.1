@@ -8,12 +8,14 @@ public class Hide : MonoBehaviour
 
     private Renderer m_Renderer;
 
-    void Start(){
+    void Start()
+    {
         // Get the Renderer component of the object
         m_Renderer = GetComponent<Renderer>();
     }
 
-    void Update(){
+    void Update()
+    {
         // Toggles visibility when the key is pressed
         if (Input.GetKeyDown(m_HideKey))
         {
